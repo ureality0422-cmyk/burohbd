@@ -286,7 +286,9 @@ function move(delta){currentIndex=(currentIndex+delta+messages.length)%messages.
 $("prev").onclick=()=>move(-1);$("next").onclick=()=>move(1);
 $("singleMode").onclick=()=>switchMode("single");
 $("boardMode").onclick=()=>switchMode("board");
-$("start").onclick=()=>$("welcome").remove();
+document.getElementById("start").addEventListener("click", function () {
+  document.getElementById("welcome").remove();
+});
 $("downloadImage").onclick=async()=>{
  const button=$("downloadImage");
  const target=currentMode==="single"?$("message-card"):$("board");
