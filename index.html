@@ -155,7 +155,10 @@ footer{text-align:center;color:#78977a;font-size:11px;padding:12px 0 0}
 <script>
  // BGM再生
 const bgm = document.getElementById("bgm");
-bgm.volume = 0.12; // iPhone Safariでは音声ファイル自体の音量調整が必要
+
+if (bgm) {
+  bgm.volume = 0.12;
+}
 
 // 最初の画面をタップしたら再生
 document.addEventListener("click", function startBgm() {
